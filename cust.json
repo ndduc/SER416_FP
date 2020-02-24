@@ -2,42 +2,37 @@
 "Cust": {
 		"schedule": [{
 			"task": {
-				"id": "111",
+				"id": "1",
 				"name": "Shuttle",
-				"shortDescription": "<p>Mans best friend</p>",
-				"category": "Canine",
-				"availability": "In Stock",
-				"variationType": {
-					"name": "Breed",
-					"value": "Collie"
-				}
-			},
-			"quantity": 1,
-			"price": "$53.00"
+				"client": "Customer 1",
+				"status": "Occupy",
+				"type": "Free",
+				"date": "02/24/2020",
+				"duration": "till arrive",
+				"fee":"None"
+			}
 		}, {
 			"task": {
-				"id": "112",
+				"id": "2",
 				"name": "care",
-				"shortDescription": "<p>Not so best friend</p>",
-				"category": "feline",
-				"availability": "Low In Stock",
-				"variationType": {
-					"name": "breed",
-					"value": "Maine Coon"
-				}
-			},
-			"quantity": 1,
-			"price": "$49.00"
+				"client": "Customer 2",
+				"status": "Vacant",
+				"type": "Free",
+				"date": "02/24/2020",
+				"duration": "2 hours",
+				"fee":"None"
+			}
 		}, {
 			"task": {
-				"id": "113",
+				"id": "3",
 				"name": "wed",
-				"shortDescription": "Likes carrots",
-				"category": "cuniculus",
-				"availability": "In Stock"
-			},
-			"quantity": 1,
-			"price": "$66.00"
+				"client": "Customer 3",
+				"status": "Vacant",
+				"type": "Fee",
+				"date": "02/24/2020",
+				"duration": "2 hours",
+				"fee":"$80.00"
+			}
 		}]
 	}
 }
