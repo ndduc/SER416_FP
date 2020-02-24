@@ -1,0 +1,17 @@
+{
+	"cust":
+		{
+			"1":{"status":"OPY", "name":"shuttle", "date":"02/22/2020", "time":"07:00", "from":"address 1", "to":"address2","type":"free"},
+			"2":{"status":"OPY", "name":"care", "date":"02/23/2020", "time":"05:00", "hour":"6","type":"free"},
+			"3":{"status":"VAC", "name":"wedding", "date":"03/03/2020", "time":"05:00", "hour":"10","type":"paid", "amount":"100.00"}
+		},
+	"cust2":
+		{
+			"1":{"status":"OPY", "name":"shuttle", "date":"04/22/2020", "time":"08:00", "from":"address 1", "to":"address2","type":"free"}
+		},
+	"cust3":
+		{
+			"1":{"status":"VAC", "name":"wedding", "date":"10/10/2020", "time":"15:00", "hour":"6","type":"paid", "amount":"200.00"},
+			"2":{"status":"VAC", "name":"care", "date":"02/30/2020", "time":"04:00", "hour":"4","type":"free"}
+		}
+}
