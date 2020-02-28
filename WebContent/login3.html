@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- 
+	Custom Script
+		stylelogin - animation
+		userScript - data
+ -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="css/stylelogin.css" rel="stylesheet" type="text/css" />
+ <script type="text/javascript" src="js/userScript.js"></script>
+
+
+</head>
+
+
+<body class="body">
+
+<div class="cntLoginBase">
+
+<img src="https://images.pexels.com/photos/1804035/pexels-photo-1804035.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=900" id="bg" alt="">
+
+<!-- 
+	data handles by script
+		in such as
+		user enter wrong pass or user name the web app will reject user from login
+		user enter correct pass and user name the web app allow user to proceed further
+ -->
+  <div class="cntMain" id="idCntMain">
+  		<div class="cntLogHeader">
+  			<label class="lblLogHeader"><b>Something Fancy Here</b></label>
+  		</div>
+		<label for="txtUser"><b>Username</b></label>
+		<input id= "idtxtU" class="txtU" type="text" placeholder="Enter Username" name="txtUser" required>
+		<br>
+	    <label for="txtPass"><b>Password</b></label>
+	    <input id= "idtxtP" class="txtP" type="password" placeholder="Enter Password" name="txtPass" required>
+		<button class="btnSub" onclick="login()">Login</button>
+		<div class="cntLblHelp">
+			<label class="lblHelp">Trouble/Questions with login?</label>
+	  	</div>
+	  	<div onclick="question()" class="cntHelp">
+			<button  class="btnHelp" ></button>
+	  	</div>  
+  </div>
+
+ 
+
+</div>
+
+
+</body>
+</html>

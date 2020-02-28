@@ -1,0 +1,6 @@
+{
+	"admin":{"pass":"123456","role":"paid"}, 
+	"vol":{"pass":"456789","role":"volunteer"},
+	"cust":{"pass":"123456","role":"customer"},
+	"donor":{"pass":"456789","role":"donor"}
+}

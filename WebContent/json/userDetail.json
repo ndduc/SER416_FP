@@ -1,0 +1,86 @@
+{ 
+"users": {
+		"user": [{
+			"info": {
+				"type":"client",
+				"name": "cust",
+				"pass": "1234567",
+				"fname": "Jack",
+				"lname": "P",
+				"dob": "02/24/1990",
+				"address": "111 E something",
+				"city":"wonderland",
+				"state":"AA",
+				"zip":"4444",
+				"phone":"4091231311",
+				"pay":"enable",
+				"card":"1412151"
+			}
+		}, {
+			"info": {
+				"type":"client",
+				"name": "cust2",
+				"pass": "1234567",
+				"fname": "Jack2",
+				"lname": "P3",
+				"dob": "02/24/1111",
+				"address": "111 E something 23",
+				"city":"wonderland 123",
+				"state":"A1A",
+				"zip":"44443",
+				"phone":"409112313111",
+				"pay":"disable",
+				"card":""
+			}
+		}, {
+			"info": {
+				"type":"volun",
+				"name": "vol",
+				"pass": "456789",
+				"fname": "DULL",
+				"lname": "P3",
+				"dob": "02/24/1111",
+				"address": "111 E something 23",
+				"city":"wonderland 123",
+				"state":"A1A",
+				"zip":"44443",
+				"phone":"409112313111",
+				"pay":"disable",
+				"card":""
+			}
+		}, {
+			"info": {
+				"type":"admin",
+				"name": "admin",
+				"pass": "123456",
+				"fname": "admin",
+				"lname": "P3",
+				"dob": "02/24/1111",
+				"address": "111 E something 23",
+				"city":"wonderland 123",
+				"state":"A1A",
+				"zip":"44443",
+				"phone":"409112313111",
+				"pay":"disable",
+				"card":""
+			}
+		}, {
+			"info": {
+				"type":"donor",
+				"name": "donor",
+				"pass": "456789",
+				"fname": "Donor",
+				"lname": "P3",
+				"dob": "02/24/1111",
+				"address": "111 E something 23",
+				"city":"wonderland 123",
+				"state":"A1A",
+				"zip":"44443",
+				"phone":"409112313111",
+				"pay":"disable",
+				"card":""
+			}
+		}
+		]
+	}
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 
+	Custom script
+		styleEmp and Background = animation
+		custScript = data
+	
+ -->
+  <link href="css/styleEmp.css" rel="stylesheet" type="text/css" />
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+   <script type="text/javascript" src="js/background.js"></script>
+<script type="text/javascript" src="js/custScript.js"></script>
+  
+</head>
+
+<body class = "body">
+
+	<div class ="cntLogout">
+		
+		
+		<img class="imgAvatar" src="https://www.picpng.com/uploads/Avatar_Beak_Black_Cute_Emotion_62212.Png">
+		<div class="cntLogoutLabel"> 
+			<label class="lblUserName">Welcome</label>
+			<label id="uname"></label>
+		</div>
+		
+	</div>
+
+	<!-- 
+		This user have 4 available option
+			Check all available schedule
+			Check all occupied schedule
+			Check this user information
+			Check all existed user
+			
+			voided option
+				generate report 
+	 -->
+
+	<div class="cntBase" id="idCntBase">
+			<div class="cntView" onclick="custRequest(); custRequestShow()">
+				<figure class="btnView">
+					<img class="imgIcon"  src="https://image.flaticon.com/icons/svg/981/981092.svg">
+					<figcaption class="lblView"><b>Check Available Schedule</b></figcaption>
+				</figure>
+			</div>
+			<div class="cntCheck" onclick="custCheck(); custCheckShow()">
+				<figure class="btnCheck">
+					<img class="imgIcon"  src="https://image.flaticon.com/icons/svg/1497/1497835.svg">
+					<figcaption class="lblCheck"><b>Check Occupied Schedule</b></figcaption>
+				</figure>
+			</div>
+			<div class="cntInfo" onclick="custEdit(); custEditShow()">
+				<figure class=btnInfo>
+					<img class="imgIcon"  src="https://image.flaticon.com/icons/svg/1047/1047690.svg">
+					<figcaption class="lblInfo"><b>View/Edit Personal Infomation</b></figcaption>
+				</figure>
+			</div>
+			<div class="cntEmp" onclick="empHuman(); empHumanShow()">
+				<figure class=btnInfo>
+					<img class="imgIcon"  src="https://image.flaticon.com/icons/svg/1047/1047690.svg">
+					<figcaption class="lblInfo"><b>View Users List</b></figcaption>
+				</figure>
+			</div>
+			
+			<div class="cntReport" onclick="empReport(); empReportShow()">
+				<figure class=btnReport>
+					<img class="imgIcon"  src="https://image.flaticon.com/icons/svg/1047/1047690.svg">
+					<figcaption class="lblInfo"><b>View Report</b></figcaption>
+				</figure>
+			</div>
+
+	</div>
+	
+	
+	<!-- 
+			Available schedule tag
+			handles by script
+	 -->
+	
+	<div class="cntRequest" id="idCntRequest">
+		<div id="sche">
+		    <h2>Schedule View</h2>
+		    <!-- <ul id="scheduleList_Ad_Avai">
+		    </ul> -->
+		    
+		    <table id="scheduleList_Ad_Avai" style="width:100%">
+			  <tr>
+			    <th>ID</th>
+			    <th>Name</th> 
+			    <th>Client</th>
+			    <th>Status</th>
+			    <th>Type</th>
+			    <th>Date</th>
+			    <th>Duration</th>
+			    <th>Fee</th>
+			  </tr>
+			</table>
+		</div>
+	</div>
+	
+	
+	<!-- 
+		Occupied tag
+		handles by scrit
+	 -->
+	 
+	<div  class="cntViewSched" id="idCntViewSched">
+		<div id="sche">
+		    <h2>Schedule View</h2>
+		    
+		    <table id="scheduleList_Ad_Ocp" style="width:100%">
+			  <tr>
+			    <th>ID</th>
+			    <th>Name</th> 
+			    <th>Client</th>
+			    <th>Status</th>
+			    <th>Type</th>
+			    <th>Date</th>
+			    <th>Duration</th>
+			    <th>Fee</th>
+			  </tr>
+			</table>
+		</div>
+	</div>
+	
+	
+	<!-- 
+		View User tag
+		handles by script
+	 -->
+	<div  class="cntViewEmp" id="idCntViewEmp">
+		<div id="sche">
+		    
+		    <ul id="viewEmp">
+		    </ul>
+		</div>
+	</div>
+	
+	
+	<!-- View Report -->
+	<div class="cntViewReport" id="idCntViewReport">
+		<div id="report">
+			<ul id="ulReport">
+			</ul>
+		</div>
+	</div>
+	
+	<!-- 
+		Check info form
+	 -->
+	 
+	<div  class="cntCheckInfo" id="idCntCheckInfo">
+		<div class="cntInfoForm">
+			<div class ="cntIFTop">
+				<label>First Name: </label>
+				<input type="text" id="inputFn" value="test" >
+				<label class="lblLast">Last Name: </label>
+				<input type="text" id="inputLn" value="test">
+			</div>
+			<div class="cntIFMid">
+				<label>Address: </label>
+				<input type="text" id="inputAdd" value="test">
+				<label>City: </label>
+				<input type="text" id="inputCity" value="test">
+				<label>Zip Code: </label>
+				<input type="number" id="inputZip" value="test">
+			</div>
+			<div class="cntIFMid2">
+				<label>Phone Number: </label>
+				<input type="number" id="inputPhone" value="test">
+			</div>
+			<div class="cntIFSub">
+				<input type="submit" onclick="custSubmitSched(), custSubmitShowShed()">
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- Detail user form
+		trigger when click on corresponded user on the user list
+		
+	-->
+	<div  class="cntCheckEmp" id="idCntCheckEmp">
+		<div class="cntInfoForm">
+			<div class ="cntIFTop">
+				<label>First Name: </label>
+				<input type="text" id="inputFnEmp" value="test" >
+				<label class="lblLast">Last Name: </label>
+				<input type="text" id="inputLnEmp" value="test">
+			</div>
+			<div class="cntIFMid">
+				<label>Address: </label>
+				<input type="text" id="inputAddEmp" value="test">
+				<label>City: </label>
+				<input type="text" id="inputCityEmp" value="test">
+				<label>Zip Code: </label>
+				<input type="number" id="inputZipEmp" value="test">
+			</div>
+			<div class="cntIFMid2">
+				<label>Phone Number: </label>
+				<input type="number" id="inputPhoneEmp" value="test">
+			</div>
+			<div class="cntIFSub">
+				<input type="submit" onclick="custSubmitEmp_Hide(), custSubmitEmp_Show()">
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
