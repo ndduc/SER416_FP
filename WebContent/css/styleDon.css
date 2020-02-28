@@ -1,0 +1,161 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.cntLogout {
+	
+	border: dotted;
+	padding-top: 2%;
+	padding-left: 80%;
+	position: fix;
+}
+
+.imgAvatar {
+	width: 120px;
+	height: 120px;
+	border-radius: 30px;
+	background: gray;
+	
+}
+
+.cntLogoutLabel {
+
+	width: 30%;
+	max-width: 30%;
+	border: dotted;
+}
+
+.lblUserName {
+	font-size: 25px;
+}
+
+
+
+.cntBase {
+	padding-top: 16%;
+	margin-left: 13%;
+	border: none;
+	width: 100%;
+	max-width: 100%;
+	height: 70%;
+	max-height: 70%;
+	position:absolute;
+}
+
+.imgIcon {
+	width: 200px;
+	height: 200px;
+	cursor: pointer;
+	border: none;
+}
+
+.cntView {
+	float: left;
+	border: none;
+	text-align: center;
+}
+.cntCheck {
+	float: left;
+	padding-left: 13%;
+	border: none;
+	text-align: center;
+}
+.cntInfo {
+	float: left;
+	padding-left: 13%;
+	border: none;
+	text-align: center;
+}
+.btnView {
+	
+	
+}
+
+.btnCheck {
+	
+	
+}
+
+figcaption {
+	padding-top: 10%;	
+	font-size: 20px;
+}
+
+
+.cntView:hover, .cntCheck:hover, .cntInfo:hover {
+	position: relative;
+	-webkit-animation-name: aniCntHelp; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  	animation-name: aniCntHelp;
+  	animation-duration: 1s;
+	
+	-webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  	-moz-animation-fill-mode: forwards;    /* FF 5+ */
+  	-o-animation-fill-mode: forwards;      /* Not implemented yet */
+  	-ms-animation-fill-mode: forwards;     /* IE 10+ */
+  	animation-fill-mode: forwards;  
+}
+@-webkit-keyframes aniCntHelp{
+	0%   {left:0px; top:0px;}
+	34%  {left:0px; top:-20px;}
+  100%  {left:0px; top:0px;}
+}
+
+@keyframes aniCntHelp {
+  	0%   {left:0px; top:0px;}
+	34%  { left:0px; top:-20px;}
+  100%  {left:0px; top:0px;}
+}
+
+
+.cntRequest {
+	padding-top: 2%;
+	border: none;
+	width: 100%;
+	max-width: 100%;
+	height: 50%;
+	max-height: 50%;
+	position:absolute;
+	
+	display: none;
+}
+
+.cntRequestForm {
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	white-space:nowrap;
+	display: inline-block;
+	margin-left: 20%;
+	margin-right: 10%;
+	width: 60%;
+	border: dotted;
+}
+
+input {
+	 width: 200px;
+	 height: 30px;
+	 
+}
+
+.cntRFTop, .cntRFMid, .cntRFMid2, .cntRFMid3, .cntRFBot, .cntRFSub {
+	
+	margin-bottom: 2%;
+	width: 100%;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+
+textarea {
+	width: 500px;
+	height: 200px;
+}
+.lblLast {
+	padding-left: 2%;
+}
+
+.cntViewSched, .cntCheckInfo {
+	display: none;
+}
+
+
+

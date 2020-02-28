@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- 
+	Custom Script used
+		background, custScript
+		background handle most the animation
+		custScript handle most data stuffs
+ -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link href="css/styleDon.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/background.js"></script>
+  <script type="text/javascript" src="js/custScript.js"></script>
+ 
+</head>
+
+<body class = "body">
+	<div class ="cntLogout">
+		
+		
+		<img class="imgAvatar" src="https://www.picpng.com/uploads/Avatar_Beak_Black_Cute_Emotion_62212.Png">
+		<div class="cntLogoutLabel"> 
+			<label class="lblUserName">Welcome</label>
+			<label id="uname"></label>
+		</div>
+		
+	</div>
+
+
+	<div class="cntBase" id="idCntBase">
+			<div class="cntView" onclick="custRequest(); custRequestShow()">	<!-- This indicates making a donation -->
+				<figure class="btnView">
+					<img class="imgIcon"  src="https://image.flaticon.com/icons/svg/981/981092.svg">
+					<figcaption class="lblView"><b>Create Donation</b></figcaption>
+				</figure>
+			</div>
+			<div class="cntCheck" onclick="custCheck(); custCheckShow()">		<!-- This indicate show view donated list in past -->
+				<figure class="btnCheck">
+					<img class="imgIcon"  src="https://image.flaticon.com/icons/svg/1497/1497835.svg">
+					<figcaption class="lblCheck"><b>Check My Donation</b></figcaption>
+				</figure>
+			</div>
+			<div class="cntInfo" onclick="custEdit(); custEditShow()">			<!-- This indicates showing this user information -->
+				<figure class=btnInfo>
+					<img class="imgIcon"  src="https://image.flaticon.com/icons/svg/1047/1047690.svg">
+					<figcaption class="lblInfo"><b>View/Edit Personal Information</b></figcaption>
+				</figure>
+			</div>
+			
+
+	</div>
+	
+	
+	<!-- 
+			Initiate donation form
+	 -->
+	
+	<div class="cntRequest" id="idCntRequest">
+		<div class="cntRequestForm">
+			<div class ="cntRFTop">
+				<label>First Name: </label>
+				<input type="text" ></input>
+				<label class="lblLast">Last Name: </label>
+				<input type="text"></input>
+			</div>
+			<div class="cntRFMid">
+				<label>Address: </label>
+				<input type="text"></input>
+				<label>City: </label>
+				<input type="text"></input>
+				<label>Zip Code: </label>
+				<input type="number"></input>
+			</div>
+			<div class="cntRFMid2">
+				<label>Phone Number: </label>
+				<input type="number"></input>
+			</div>
+			<div class="cntRFMid3">
+				<label>Date: </label>
+				<input type="date"></input>
+			</div>
+			<div class="cntRFBot">
+				<label>Amount of Donation: </label>
+				<input type="text">
+			</div>
+			<div class="cntRFSub">
+				<input type="submit" onclick="custSubmit(), custSubmitShow(), custSubJson()">
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- 
+		Check Donation List as Div Tag
+		Code will be handled by script
+	 -->
+	 
+	<div  class="cntViewSched" id="idCntViewSched">
+		<div id="sche">
+		    <h2>Schedule View</h2>
+		    <ul id="donaList">
+		    </ul>
+		</div>
+	</div>
+	
+	
+	<!-- 
+		Current user information form
+		data is handled by script
+	 -->
+	 
+	<div  class="cntCheckInfo" id="idCntCheckInfo">
+		<div class="cntInfoForm">
+			<div class ="cntIFTop">
+				<label>First Name: </label>
+				<input type="text" id="inputFn" value="test" >
+				<label class="lblLast">Last Name: </label>
+				<input type="text" id="inputLn" value="test">
+			</div>
+			<div class="cntIFMid">
+				<label>Address: </label>
+				<input type="text" id="inputAdd" value="test">
+				<label>City: </label>
+				<input type="text" id="inputCity" value="test">
+				<label>Zip Code: </label>
+				<input type="number" id="inputZip" value="test">
+			</div>
+			<div class="cntIFMid2">
+				<label>Phone Number: </label>
+				<input type="number" id="inputPhone" value="test">
+			</div>
+			
+	
+			<div class="cntIFSub">
+				<input type="submit" onclick="custSubmitSched(), custSubmitShowShed()">	<!-- Function brief: one is hide and one is show -->
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

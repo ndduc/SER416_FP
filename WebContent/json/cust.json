@@ -1,0 +1,41 @@
+{ 
+"Cust": {
+		"schedule": [{
+			"task": {
+				"id": "1",
+				"name": "Shuttle",
+				"client": "cust",
+				"status": "Occupy",
+				"type": "Free",
+				"date": "02/24/2020",
+				"duration": "till arrive",
+				"fee":"None",
+				"volun":"vol"
+			}
+		}, {
+			"task": {
+				"id": "2",
+				"name": "care",
+				"client": "cust",
+				"status": "Vacant",
+				"type": "Free",
+				"date": "02/24/2020",
+				"duration": "2 hours",
+				"fee":"None",
+				"volun":"None"
+			}
+		}, {
+			"task": {
+				"id": "3",
+				"name": "wed",
+				"client": "cust3",
+				"status": "Vacant",
+				"type": "Fee",
+				"date": "02/24/2020",
+				"duration": "2 hours",
+				"fee":"$80.00",
+				"volun":"None"
+			}
+		}]
+	}
+}

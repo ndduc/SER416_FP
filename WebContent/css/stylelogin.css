@@ -1,0 +1,188 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/**
+	Login Div Ani
+*/
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes aniCntLogin{
+	0%   {visibility: visible; left:0px; top:0px;}
+  100%  {visibility: visible; left:0px; top:180px;}
+}
+@keyframes aniCntLogin {
+ 	 0%   {visibility: visible; left:0px; top:0px;}
+ 	100%  {visibility: visible; left:0px; top:180px;}
+}
+/*
+	Hide with style animation
+*/
+@-webkit-keyframes aniCntLoginHide{
+	0%   {visibility: visible; left:0px; top:180px;}
+  100%  {visibility: hide; left:2000px; top:180px;}
+}
+@keyframes aniCntLoginHide {
+ 	 0%   {visibility: visible; left:0px; top:180px;}
+ 	100%  {visibility: hide; left:2000px; top:180px;}
+}
+/*
+	Help Button Ani
+*/
+@-webkit-keyframes aniCntHelp{
+	0%   {left:0px; top:0px;}
+	34%  {left:0px; top:-4px;}
+  100%  {left:0px; top:0px;}
+}
+
+@keyframes aniCntHelp {
+  	0%   {left:0px; top:0px;}
+	34%  { left:0px; top:-4px;}
+  100%  {left:0px; top:0px;}
+}
+
+.body {
+	/*
+	background: url(https://images.pexels.com/photos/1252873/pexels-photo-1252873.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    
+    width = 100%;
+    height = 100%;*/
+    
+}
+
+/**
+	Background Image - handling with JS
+*/
+#bg { position: fixed; top: 0; left: 0; }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+
+.cntLoginBase {
+	
+	
+	text-align:right;
+	border: none;
+	
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	max-height: 100%;
+	position: relative;
+}
+
+
+
+.cntMain {
+	background-color: white;
+	border: 2px solid red;
+  	border-radius: 5px;
+	width: 310px;
+	max-width: 310px;
+	display: inline-block;
+	visibility: hidden;
+	margin-right: 20%;
+	padding-right: 1%;
+	padding-left: 1%;
+	padding-bottom: 1%;
+	padding-top: 2%;
+	position: relative;
+	-webkit-animation-name: aniCntLogin; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  	animation-name: aniCntLogin;
+  	animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  	-moz-animation-fill-mode: forwards;    /* FF 5+ */
+  	-o-animation-fill-mode: forwards;      /* Not implemented yet */
+  	-ms-animation-fill-mode: forwards;     /* IE 10+ */
+  	animation-fill-mode: forwards;  
+}
+.cntLogHeader {
+	border: dotted;
+	text-align: center;
+	margin-bottom: 16%;
+}
+.lblLogHeader {
+	font-size: 20px;
+}
+.txtU {
+	width: 214px;
+	max-width: 214px;
+	height: 32px;
+	margin-bottom: 6px;
+	margin-top: 10px
+}
+.txtP {
+	width: 215px;
+	max-width: 215px;
+	height: 32px;
+	margin-bottom: 6px;
+	margin-top: 10px;
+}
+.btnSub {
+	width: 300px;
+	max-width: 300px;
+	height: 35px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.cntLblHelp {
+	width: 200px;
+	max-width: 200px;
+	height: 60px;
+	max-height: 60px;
+	border: none;
+	float: left;
+	padding-top: 8%;
+	padding-left: 13%;
+}
+.lblHelp {
+	font: tahoma;
+	font-size: 14px;
+	border: none;
+	padding-left: 7%;
+}
+.cntHelp {
+	margin-top: 3%;
+	width: 50px;
+	max-width: 50px;
+	height: 60px;
+	max-height: 60px;
+	border: none;
+	float: right;
+}
+
+.cntHelp:hover {
+	position: relative;
+	-webkit-animation-name: aniCntHelp; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  	animation-name: aniCntHelp;
+  	animation-duration: 1s;
+	
+	-webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  	-moz-animation-fill-mode: forwards;    /* FF 5+ */
+  	-o-animation-fill-mode: forwards;      /* Not implemented yet */
+  	-ms-animation-fill-mode: forwards;     /* IE 10+ */
+  	animation-fill-mode: forwards;  
+}
+
+.btnHelp {
+	
+	background: url(https://img.icons8.com/bubbles/50/000000/help.png);
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	border: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+
