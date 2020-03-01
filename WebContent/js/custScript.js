@@ -252,7 +252,7 @@ $(document).ready(function(){
 	    	  
 	    	  if(client == path3){
 	    		  console.log(element.info.fname);
-	    		  uname.insertAdjacentHTML( 'beforeend',  element.info.fname);
+	    		  uname.insertAdjacentHTML( 'beforeend', "<b>" + element.info.fname + "</b>");
 	    		  document.getElementById("inputFn").value = element.info.fname;
 	    		  document.getElementById("inputLn").value = element.info.lname;
 	    		  document.getElementById("inputAdd").value = element.info.address;
@@ -493,13 +493,56 @@ function vol_cancel() {
 }
 function cust_can_vacant() {
 	window.onclick = e => {
+		/**
+		 * Get last string from href link
+		 * where
+		 * last string equivalent to
+		 * 	?something
+		 * */
+		var path = window.location.href;
+		console.log("TEST");
+		console.log(path);
+		var path2 = path.substring(path.lastIndexOf('/') + 1);
+		console.log(path.substring(path.lastIndexOf('?') + 1));	//Get Last String aka - get Identifier for user
+		var path3 = path.substring(path.lastIndexOf('?') + 1);
+		
 		console.log(e.target.innerText);
 		var test = e.target.innerText;
 		if(test.length < 2 || test.length > 0) {	//condition terminate scenario when user click on empty row
 			var yes = window.confirm("Confirm the cancellation of service #" + test + "?")
 			if (yes) {
 				alert("Scenario: service " + test + " has been canceled removed from job list");
-				console.log("Not Implemented");
+				$.ajax({
+				    url: url,
+				    dataType: 'json',
+				      error: function(){
+				        console.log('JSON FAILED for data');
+				      },
+				    success:function(results){
+				     var cartItemsList = document.getElementById("scheduleList");
+				     document.getElementById("scheduleList").innerHTML = "";
+				     cartItemsList.insertAdjacentHTML('beforeend',"<tr><th>ID</th><th>Name</th> <th>Client</th><th>Status</th><th>Type</th><th>Date</th><th>Duration</th><th>Fee</th></tr>");
+				      results.Cust.schedule.forEach(function(element) {
+				    	  var client = "data=" + element.task.client;
+				          console.log("Test predefined client: " + path3);
+				          console.log("Test Client: " + client); //Check if string is successfully concated
+				          if(client == path3) {
+					    	  if(element.task.id == test) {
+					    		  delete element.task;		//remove temporary data - for showing
+					          } else {
+					        	  cartItemsList.insertAdjacentHTML( 'beforeend',"<tr>" + "<td  onclick=\"cust_can_book()\"> <font color=\"red\">" +   element.task.id + "</td><td>" + 
+					            		  element.task.name+ "</td><td>" + element.task.client+ "</td><td>" + element.task.status +  "</td><td>" +
+					            		  element.task.type + "</td><td>" + element.task.date +"</td><td>" + element.task.duration +"</td><td>" + 
+					            		  element.task.fee + "</td></tr>");
+					          } 
+				          }
+				      }
+				      );
+				      // end of forEach
+				    }  // end of success fn
+				   }) // end of Ajax call
+				   
+				   console.log(JSON.parse(url));
 			}
 			else {
 				alert("Scenario: service " + test + " still remain in your job list");
@@ -510,13 +553,56 @@ function cust_can_vacant() {
 }
 function cust_can_book() {
 	window.onclick = e => {
+		/**
+		 * Get last string from href link
+		 * where
+		 * last string equivalent to
+		 * 	?something
+		 * */
+		var path = window.location.href;
+		console.log("TEST");
+		console.log(path);
+		var path2 = path.substring(path.lastIndexOf('/') + 1);
+		console.log(path.substring(path.lastIndexOf('?') + 1));	//Get Last String aka - get Identifier for user
+		var path3 = path.substring(path.lastIndexOf('?') + 1);
+		
 		console.log(e.target.innerText);
 		var test = e.target.innerText;
 		if(test.length < 2 || test.length > 0) {	//condition terminate scenario when user click on empty row
 			var yes = window.confirm("Confirm the cancellation of service (Booked - penalty might apply) #" + test + "?")
 			if (yes) {
 				alert("Scenario: service " + test + " has been canceled removed from job list");
-				console.log("Not Implemented");
+				$.ajax({
+				    url: url,
+				    dataType: 'json',
+				      error: function(){
+				        console.log('JSON FAILED for data');
+				      },
+				    success:function(results){
+				     var cartItemsList = document.getElementById("scheduleList");
+				     document.getElementById("scheduleList").innerHTML = "";
+				     cartItemsList.insertAdjacentHTML('beforeend',"<tr><th>ID</th><th>Name</th> <th>Client</th><th>Status</th><th>Type</th><th>Date</th><th>Duration</th><th>Fee</th></tr>");
+				      results.Cust.schedule.forEach(function(element) {
+				    	  var client = "data=" + element.task.client;
+				          console.log("Test predefined client: " + path3);
+				          console.log("Test Client: " + client); //Check if string is successfully concated
+				          if(client == path3) {
+					    	  if(element.task.id == test) {
+					    		  delete element.task;		//remove temporary data - for showing
+					          } else {
+					        	  cartItemsList.insertAdjacentHTML( 'beforeend',"<tr>" + "<td  onclick=\"cust_can_book()\"> <font color=\"red\">" +   element.task.id + "</td><td>" + 
+					            		  element.task.name+ "</td><td>" + element.task.client+ "</td><td>" + element.task.status +  "</td><td>" +
+					            		  element.task.type + "</td><td>" + element.task.date +"</td><td>" + element.task.duration +"</td><td>" + 
+					            		  element.task.fee + "</td></tr>");
+					          } 
+				          }
+				      }
+				      );
+				      // end of forEach
+				    }  // end of success fn
+				   }) // end of Ajax call
+				   
+				   console.log(JSON.parse(url));
 			}
 			else {
 				alert("Scenario: service " + test + " still remain in your job list");
@@ -567,6 +653,14 @@ function empReportShow() {
 	    }  // end of success fn
 	   }) // end of Ajax call
 	   
+}
+
+function custSubJson() {
+	alert("Your request has been submitted");
+}
+
+function custInfo() {
+	alert("Your changes have been submitted");
 }
  
  

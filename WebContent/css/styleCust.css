@@ -119,6 +119,7 @@ figcaption {
 }
 
 .cntRequestForm, .cntInfoForm {
+	
 	padding-left: 20px;
 	padding-top: 20px;
 	padding-bottom: 10px;
@@ -126,8 +127,9 @@ figcaption {
 	display: inline-block;
 	margin-left: 20%;
 	margin-right: 10%;
+	margin-top: 5%;
 	width: 60%;
-	border: none;
+	border: 1px solid black;
 }
 
 input {
@@ -156,6 +158,12 @@ textarea {
 
 .cntViewSched, .cntCheckInfo {
 	display: none;
+}
+
+.tableViewSched {
+
+  
+      
 }
 
 

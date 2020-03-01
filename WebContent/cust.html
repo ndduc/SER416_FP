@@ -21,7 +21,7 @@
 		<img class="imgAvatar" src="https://www.picpng.com/uploads/Avatar_Beak_Black_Cute_Emotion_62212.Png">
 		<div class="cntLogoutLabel"> 
 			<label class="lblUserName">Welcome</label>
-			<label id="uname"></label>
+			<label id="uname" style="font-size:40px;"></label>
 		</div>
 		
 	</div>
@@ -64,7 +64,9 @@
 	 -->
 	
 	<div class="cntRequest" id="idCntRequest">
+	
 		<div class="cntRequestForm">
+		<h2><b>Request service form:</b></h2>
 			<div class ="cntRFTop">
 				<label>First Name: </label>
 				<input type="text" ></input>
@@ -105,9 +107,13 @@
 	 
 	<div  class="cntViewSched" id="idCntViewSched">
 		<div id="sche">
-		    <h2>Schedule View</h2>
+		    <h2>My Schedule</h2>
+		    <br>
+		    <h3>To go back hit F5 on keyboard</h3>
+		    <br>
+		    <h4>Click on an item on ID column to remove a service</h4>
 		    
-		    <table id="scheduleList" style="width:100%">
+		    <table id="scheduleList" style="width:50%" class="tableViewSched" border="1">
 			  <tr>
 			    <th>ID</th>
 			    <th>Name</th> 
@@ -132,6 +138,7 @@
 	 
 	<div  class="cntCheckInfo" id="idCntCheckInfo">
 		<div class="cntInfoForm">
+		<h2><b>Information form:</b></h2>
 			<div class ="cntIFTop">
 				<label>First Name: </label>
 				<input type="text" id="inputFn" value="test" >
@@ -153,7 +160,7 @@
 			
 	
 			<div class="cntIFSub">
-				<input type="submit" onclick="custSubmitSched(), custSubmitShowShed()">
+				<input type="submit" onclick="custInfo(), custSubmitSched(), custSubmitShowShed()">
 			</div>
 		</div>
 	</div>

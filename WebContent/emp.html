@@ -24,7 +24,7 @@
 		<img class="imgAvatar" src="https://www.picpng.com/uploads/Avatar_Beak_Black_Cute_Emotion_62212.Png">
 		<div class="cntLogoutLabel"> 
 			<label class="lblUserName">Welcome</label>
-			<label id="uname"></label>
+			<label id="uname" style="font-size:40px;"></label>
 		</div>
 		
 	</div>
@@ -59,18 +59,21 @@
 					<figcaption class="lblInfo"><b>View/Edit Personal Infomation</b></figcaption>
 				</figure>
 			</div>
-			<div class="cntEmp" onclick="empHuman(); empHumanShow()">
-				<figure class=btnInfo>
-					<img class="imgIcon"  src="https://image.flaticon.com/icons/svg/1047/1047690.svg">
-					<figcaption class="lblInfo"><b>View Users List</b></figcaption>
-				</figure>
-			</div>
 			
-			<div class="cntReport" onclick="empReport(); empReportShow()">
-				<figure class=btnReport>
-					<img class="imgIcon"  src="https://image.flaticon.com/icons/svg/1047/1047690.svg">
-					<figcaption class="lblInfo"><b>View Report</b></figcaption>
-				</figure>
+			<div class="cntBot">
+				<div class="cntEmp" onclick="empHuman(); empHumanShow()">
+					<figure class=btnInfo>
+						<img class="imgIcon"  src="https://image.flaticon.com/icons/svg/2640/2640788.svg">
+						<figcaption class="lblInfo"><b>View Users List</b></figcaption>
+					</figure>
+				</div>
+				
+				<div class="cntReport" onclick="empReport(); empReportShow()">
+					<figure class=btnReport>
+						<img class="imgIcon"  src="https://image.flaticon.com/icons/svg/365/365476.svg">
+						<figcaption class="lblInfo"><b>View Report</b></figcaption>
+					</figure>
+				</div>
 			</div>
 
 	</div>
@@ -83,11 +86,11 @@
 	
 	<div class="cntRequest" id="idCntRequest">
 		<div id="sche">
-		    <h2>Schedule View</h2>
+		    <h2>Available Service</h2>
 		    <!-- <ul id="scheduleList_Ad_Avai">
 		    </ul> -->
 		    
-		    <table id="scheduleList_Ad_Avai" style="width:100%">
+		    <table id="scheduleList_Ad_Avai" style="width:50%" border="1">
 			  <tr>
 			    <th>ID</th>
 			    <th>Name</th> 
@@ -112,7 +115,7 @@
 		<div id="sche">
 		    <h2>Schedule View</h2>
 		    
-		    <table id="scheduleList_Ad_Ocp" style="width:100%">
+		    <table id="scheduleList_Ad_Ocp" style="width:50%" border="1">
 			  <tr>
 			    <th>ID</th>
 			    <th>Name</th> 
