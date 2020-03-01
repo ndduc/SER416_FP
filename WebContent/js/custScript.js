@@ -13,9 +13,9 @@
  *  If use login as Volunteer or Admin then the list will show schedule of all customer
  *  	Color indicate the same definition with customer view
  *  */
-var url = "json/cust.json";
-var url2 = "json/userDetail.json";
-var url3 = "json/donor.json";
+var url = "https://raw.githubusercontent.com/ndduc/SER416_FP/master/WebContent/json/cust.json?token=AGBY2BB4TBZ3ZZDQOIY7J7C6MVB66";
+var url2 = "https://raw.githubusercontent.com/ndduc/SER416_FP/master/WebContent/json/userDetail.json?token=AGBY2BBEIR6SGLDUWKB574C6MVCAS";
+var url3 = "https://raw.githubusercontent.com/ndduc/SER416_FP/master/WebContent/json/donor.json?token=AGBY2BEZFXXRMNLNE3FGZKK6MVCBW";
 //var url2 = "https://github.com/ndduc/SER416_FP/blob/master/cust.json";
 
 $(document).ready(function(){
@@ -616,7 +616,7 @@ function cust_can_book() {
 function empReportShow() {
 	var no = 0;
 	  var fe = 0;
-	  var feMoney = 0;
+	  var feMoney;
 	  
 	$.ajax({
 	    url: url,
@@ -635,20 +635,23 @@ function empReportShow() {
 	            		  element.task.type + "</td><td>" + element.task.date +"</td><td>" + element.task.duration +"</td><td>" + 
 	            		  element.task.fee + "</td></tr>");*/
 	        	  
-	        	  cartItemsList.insertAdjacentHTML('beforeend',
-	        			  "<li>" + "Number of free service: " + no +
-	        			  "</li>");
 	          } else if (element.task.fee !="None") {
 	        	  fe = fe + 1;
 	        	  console.log("Fee " + fe);
 	        	  feMoney = feMoney + element.task.fee;
 	        	  console.log("Money " + feMoney);
-	        	  cartItemsList.insertAdjacentHTML('beforeend',
-	        			  "<li>" + "Number of paid service: " + fe +
-	        			  "</li><li>" + "Amount earn from paid service: " + feMoney
-	        			  + "</li>");
+	        	  
 	          }
-	      });
+	      }
+	      );
+	      cartItemsList.insertAdjacentHTML('beforeend',
+    			  "<li>" + "Number of free service: " + no +
+    			  "</li>");
+	      
+	      cartItemsList.insertAdjacentHTML('beforeend',
+    			  "<li>" + "Number of paid service: " + fe +
+    			  "</li><li>" + "Amount earn from paid service: $" + feMoney
+    			  + "</li>");
 	      // end of forEach
 	    }  // end of success fn
 	   }) // end of Ajax call
