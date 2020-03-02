@@ -18,6 +18,7 @@
 
 <body class = "body">
 
+
 	<div class ="cntLogout">
 		
 		
@@ -56,7 +57,7 @@
 			<div class="cntInfo" onclick="custEdit(); custEditShow()">
 				<figure class=btnInfo>
 					<img class="imgIcon"  src="https://image.flaticon.com/icons/svg/1047/1047690.svg">
-					<figcaption class="lblInfo"><b>View/Edit Personal Infomation</b></figcaption>
+					<figcaption class="lblInfo"><b>View/Edit Personal Info</b></figcaption>
 				</figure>
 			</div>
 			
@@ -192,6 +193,7 @@
 	-->
 	<div  class="cntCheckEmp" id="idCntCheckEmp">
 		<div class="cntInfoForm">
+			<h1>Selected User Info:</h1>
 			<div class ="cntIFTop">
 				<label>First Name: </label>
 				<input type="text" id="inputFnEmp" value="test" >
@@ -211,8 +213,10 @@
 				<input type="number" id="inputPhoneEmp" value="test">
 			</div>
 			<div class="cntIFSub">
-				<input type="submit" onclick="custSubmitEmp_Hide(), custSubmitEmp_Show()">
+				<input type="submit" onclick="custSubmitEmp_Hide(), custSubmitEmp_Show()" value="Update" class="btnEnter">
+				<input type="submit" onclick="empDel_Hide(), empDel_Show(), empDel()" value="Remove User" class ="btnDel">
 			</div>
+
 		</div>
 	</div>
 

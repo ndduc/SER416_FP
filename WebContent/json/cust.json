@@ -1,6 +1,7 @@
 { 
 "Cust": {
-		"schedule": [{
+		"schedule": [
+		{
 			"task": {
 				"id": "1",
 				"name": "Shuttle",
@@ -15,7 +16,7 @@
 		}, {
 			"task": {
 				"id": "2",
-				"name": "care",
+				"name": "Senior Care",
 				"client": "cust",
 				"status": "Vacant",
 				"type": "Free",
@@ -27,7 +28,7 @@
 		}, {
 			"task": {
 				"id": "3",
-				"name": "wed",
+				"name": "Wedding Service",
 				"client": "cust3",
 				"status": "Vacant",
 				"type": "Fee",
@@ -36,6 +37,67 @@
 				"fee":"80.00",
 				"volun":"None"
 			}
-		}]
+		}, {
+			"task": {
+				"id": "4",
+				"name": "Wedding Service",
+				"client": "cust1@gmail.com",
+				"status": "Vacant",
+				"type": "Fee",
+				"date": "02/24/2020",
+				"duration": "2 hours",
+				"fee":"80.00",
+				"volun":"None"
+			}
+		}, {
+			"task": {
+				"id": "5",
+				"name": "Wedding Service",
+				"client": "cust1@gmail.com",
+				"status": "Vacant",
+				"type": "Fee",
+				"date": "02/24/2020",
+				"duration": "2 hours",
+				"fee":"80.00",
+				"volun":"None"
+			}
+		}, {
+			"task": {
+				"id": "6",
+				"name": "Wedding Service",
+				"client": "cust1@gmail.com",
+				"status": "Vacant",
+				"type": "Fee",
+				"date": "02/24/2020",
+				"duration": "2 hours",
+				"fee":"80.00",
+				"volun":"None"
+			}
+		}, {
+			"task": {
+				"id": "7",
+				"name": "Wedding Service",
+				"client": "cust1@gmail.com",
+				"status": "Vacant",
+				"type": "Fee",
+				"date": "02/24/2020",
+				"duration": "2 hours",
+				"fee":"80.00",
+				"volun":"None"
+			}
+		}, {
+			"task": {
+				"id": "8",
+				"name": "Wedding Service",
+				"client": "cust1@gmail.com",
+				"status": "Vacant",
+				"type": "Fee",
+				"date": "02/24/2020",
+				"duration": "2 hours",
+				"fee":"80.00",
+				"volun":"None"
+			}
+		}
+		]
 	}
 }

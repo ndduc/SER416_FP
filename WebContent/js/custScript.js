@@ -645,13 +645,13 @@ function empReportShow() {
 	      }
 	      );
 	      cartItemsList.insertAdjacentHTML('beforeend',
-    			  "<li>" + "Number of free service: " + no +
-    			  "</li>");
+    			  "<li><b>" + "Number of free service: " + no +
+    			  "</b></li>");
 	      
 	      cartItemsList.insertAdjacentHTML('beforeend',
-    			  "<li>" + "Number of paid service: " + fe +
-    			  "</li><li>" + "Amount earn from paid service: $" + feMoney
-    			  + "</li>");
+    			  "<li><b>" + "Number of paid service: " + fe +
+    			  "</b></li><li><b>" + "Amount earn from paid service: $" + feMoney
+    			  + "</b></li>");
 	      // end of forEach
 	    }  // end of success fn
 	   }) // end of Ajax call
